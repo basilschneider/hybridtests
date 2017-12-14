@@ -1,0 +1,3 @@
+Serial: GS8QN_7002
+Batch: Bad
+Current at startup: 63.2 mA

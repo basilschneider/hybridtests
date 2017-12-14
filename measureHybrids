@@ -1,0 +1,184 @@
+#!/usr/bin/env bash
+
+# Measure 8CBC2 hybrids
+
+# TODO: When running the Middleware it sometimes gets stuck and the script needs
+# to be killed. It could be setup such that the Middleware runs as a separate
+# process and only that process needs to be killed, while the script could
+# continue running
+# TODO: I guess the output directory names by taking their names with the latest
+# timestamps. This is fairly failsafe. A nicer solution, though, would be to
+# parse the output of the Middleware to a separate file descriptor and get the
+# filename like this
+# TODO: To get the latest folder, I parse ls, which is not nice. Fixing the TODO
+# just above this one, would also fix this TODO
+
+outdir=hybrid_functional_tests
+logname=log.txt
+cfghybrid=settings/HybridTest8CBC.xml
+
+askYN(){
+    y="Yes, continue!"
+    n="No, cancel!"
+    select yn in "${y}" "${n}"; do
+        case "${yn}" in
+            "${y}") return;;
+            "${n}") exit;;
+        esac
+    done
+}
+
+askYNR(){
+    y="Yes, continue!"
+    r="No, repeat!"
+    n="No, cancel!"
+    select yn in "${y}" "${r}" "${n}"; do
+        case "${yn}" in
+            "${y}") return 1;;
+            "${r}") return 0;;
+            "${n}") exit;;
+        esac
+    done
+}
+
+askComment(){
+    echo "Comment the outcome of the last measurement:"
+    read -r comment
+    echo "User comment: ${comment}" >> "${1}"
+}
+
+# Setup Middleware
+. ./setup.sh
+
+# Connect hybrid
+echo "Did you connect the hybrid you want to measure and did you power cycle?"
+askYN
+
+# Get name of hybrid
+# Implement a do while loop
+while
+    echo -n "Tell me the serial number of the hybrid: "
+    read -r hybridname
+    echo
+    echo "You say the serial number of the hybrid is: ${hybridname}"
+    echo "Is this correct?"
+    askYNR
+do
+    :
+done
+
+# Directory and log file names
+dirparent="${outdir}/${hybridname}"
+logparent="${dirparent}/${logname}"
+dircal="${dirparent}/calibration"
+logcal="${dircal}/${logname}"
+dirreg="${dirparent}/registers"
+logreg="${dirreg}/${logname}"
+dirshr="${dirparent}/shorts"
+logshr="${dirshr}/${logname}"
+dirant="${dirparent}/antenna"
+logant="${dirant}/${logname}"
+dirocc="${dirparent}/occupancy"
+logocc="${dirocc}/${logname}"
+
+# Create directories
+if [ -d "${dirparent}" ]; then
+    echo "The directory ${dirparent} already exists. Maybe you already measured "
+    echo "this hybrid? Do you want me to delete this entire folder?"
+    askYN
+    rm -rf "${dirparent}"
+fi
+mkdir -p "${dircal}" "${dirreg}" "${dirshr}" "${dirant}" "${dirocc}"
+
+# Ask for current
+echo -n "Tell me the LV current (in mA) that is drawn by the hybrid: "
+read -r current
+echo "Current at startup: ${current} mA" >> "${logparent}"
+
+# Calibration
+while
+    echo "Running calibration"
+    calibrate 2>&1 | tee "${logcal}"
+    echo "Do you want to keep that measurement?"
+    askYNR
+do
+    :
+done
+askComment "${logcal}"
+
+# Get folder with calibration results and move it
+dircalres="$(ls -1dt Results/Calibration_* | head -1)"
+mv "${dircalres}" "${dircal}"
+dircalres="${dircal}/${dircalres#Results/}"
+
+# Set calibration results in hybridtest config (quoting nightmare)
+sed -i '/CBC_Files/s@"[^"]*"@"'${dircalres}'/"@' "${cfghybrid}"
+
+# Test registers of chips
+while
+    echo "Running registers test"
+    hybridtest -r 2>&1 | tee "${logreg}"
+    echo "Do you want to keep that measurement?"
+    askYNR
+do
+    :
+done
+askComment "${logreg}"
+
+# Move results
+mv "$(ls -1dt Results/HybridTest_* | head -1)" "${dirreg}"
+
+# Test shorts on hybrid
+while
+    echo "Running shorts test"
+    hybridtest -t 2>&1 | tee "${logshr}"
+    echo "Do you want to keep that measurement?"
+    askYNR
+do
+    :
+done
+askComment "${logshr}"
+
+# Move results
+mv "$(ls -1dt Results/HybridTest_* | head -1)" "${dirshr}"
+
+# Antenna test
+echo "Have you turned on the signal generator for the antenna test?"
+askYN
+while
+    echo "Running antenna test"
+    hybridtest -a 2>&1 | tee "${logant}"
+    echo "Do you want to keep that measurement?"
+    askYNR
+do
+    :
+done
+askComment "${logant}"
+
+# Move results
+mv "$(ls -1dt Results/HybridTest_* | head -1)" "${dirant}"
+
+# Turn off signal generator
+echo "Have you turned off the signal generator?"
+askYN
+
+# Measure occupancy
+while
+    echo "Measuring occupancy"
+    hybridtest 2>&1 | tee "${logocc}"
+    echo "Do you want to keep that measurement?"
+    askYNR
+do
+    :
+done
+askComment "${logocc}"
+
+# Move results
+mv "$(ls -1dt Results/HybridTest_* | head -1)" "${dirocc}"
+
+# Ask for busy current
+echo -n "Tell me the LV current (in mA) that is drawn by the hybrid: "
+read -r current
+echo "Current while busy: ${current} mA" >> "${logparent}"
+
+echo "All done"

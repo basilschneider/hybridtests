@@ -26,14 +26,10 @@ countRBErrors(){
     }END{
         print(rbe)
     }' "${log}")
-    echo foo01
-    echo ${rbe}
     # If ${rbe} is set and not empty, add it to ${rbErrors}
     if [ -n "${rbe}" ]; then
         rbErrors=$(( "${rbErrors}" + ${rbe} ))
     fi
-    echo ${rbErrors}
-    echo foo02
 }
 
 repLong(){

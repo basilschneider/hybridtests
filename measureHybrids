@@ -41,6 +41,17 @@ askYNR(){
     done
 }
 
+askGB(){
+    g="Good"
+    b="Bad"
+    select gb in "${g}" "${b}"; do
+        case "${gb}" in
+            "${g}") echo "Batch: Good" >> "${logparent}"; return;;
+            "${b}") echo "Batch: Bad" >> "${logparent}"; return;;
+        esac
+    done
+}
+
 askComment(){
     echo "Comment the outcome of the last measurement:"
     read -r comment
@@ -89,6 +100,14 @@ if [ -d "${dirparent}" ]; then
     rm -rf "${dirparent}"
 fi
 mkdir -p "${dircal}" "${dirreg}" "${dirshr}" "${dirant}" "${dirocc}"
+
+# Write serial number in log file
+echo "Serial: ${hybridname}" >> "${logparent}"
+
+# Ask if this hybrid is from a good or bad batch
+echo "Is this hybrid from the good or the bad batch, as defined by "
+echo "the manufacturer?"
+askGB
 
 # Ask for current
 echo -n "Tell me the LV current (in mA) that is drawn by the hybrid: "

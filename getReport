@@ -1,0 +1,171 @@
+#!/usr/bin/env bash
+
+# Get report from hybrid tests
+
+long=false
+dir=hybrid_functional_tests
+logfile=log.txt
+
+usage(){
+    echo "Produce report from hybrid tests. This is basically simply grepping "
+    echo "the log files in the right order for the right words."
+    echo
+    echo "Usage: $(basename $0) [option]"
+    echo "where [option] can be"
+    echo "  -h               Show this help"
+    echo "  -l               Create long instead of short report"
+    echo "  -d [dir]         Input directory (default: ${dir})"
+}
+
+countRBErrors(){
+    local log="${1}"
+    # Use awk to count all readback errors
+    grep 'There were [0-9]* Readback Errors' "${log}"
+    rbe=$(awk '/There were [0-9]* Readback Errors/{
+        rbe += gensub("^.*There were ([0-9]*) Readback Errors.*$", "\\1", "g", $0)
+    }END{
+        print(rbe)
+    }' "${log}")
+    echo foo01
+    echo ${rbe}
+    # If ${rbe} is set and not empty, add it to ${rbErrors}
+    if [ -n "${rbe}" ]; then
+        rbErrors=$(( "${rbErrors}" + ${rbe} ))
+    fi
+    echo ${rbErrors}
+    echo foo02
+}
+
+repLong(){
+    echo long report
+}
+
+repShort(){
+    for hybrid in "${dir}"/*; do
+
+        # Count read back errors
+        rbErrors=0
+
+        # Set directory and log file names
+        logparent="${hybrid}/${logfile}"
+        logcal="${hybrid}/calibration/${logfile}"
+        logreg="${hybrid}/registers/${logfile}"
+        logshr="${hybrid}/shorts/${logfile}"
+        logant="${hybrid}/antenna/${logfile}"
+        logocc="${hybrid}/occupancy/${logfile}"
+
+        # General information
+        echo "General information:"
+        if [ -f "${logparent}" ]; then
+            cat "${logparent}"
+        else
+            echo "No parent log file found: ${logparent}"
+            echo "This is bad."
+        fi
+        echo
+
+        # Calibration results
+        echo "Calibration results:"
+        if [ -f "${logcal}" ]; then
+            grep 'Too many CBC readback errors' "${logcal}"
+            grep 'User comment' "${logcal}"
+            # Count read back errors
+            countRBErrors "${logcal}"
+        else
+            echo "No calibration log file found: ${logcal}"
+        fi
+        echo
+
+        # Register read/write tests
+        echo "Register read/write tests:"
+        if [ -f "${logreg}" ]; then
+            grep ' on CBC' "${logreg}"
+            grep 'User comment' "${logreg}"
+            # Count read back errors
+            countRBErrors "${logreg}"
+        else
+            echo "No registers log file found: ${logreg}"
+        fi
+        echo
+
+        # Shorts finding tests
+        echo "Shorts finding tests:"
+        if [ -f "${logshr}" ]; then
+            sed '1,/Shorted channels searching procedure/d' "${logshr}" | \
+                egrep -v 'TCanvas::Print|Results of occupancy'
+            # Count read back errors
+            countRBErrors "${logshr}"
+        else
+            echo "No registers log file found: ${logshr}"
+        fi
+        echo
+
+        # Antenna tests
+        echo "Antenna tests:"
+        if [ -f "${logant}" ]; then
+            sed -n '/Open channels on TOP:/,/Total number of open channels/p' \
+                "${logant}"
+            grep 'User comment' "${logant}"
+            # Count read back errors
+            countRBErrors "${logant}"
+        else
+            echo "No antenna log file found: ${logant}"
+        fi
+        echo
+
+        # Occupancy tests
+        echo "Occupancy tests:"
+        if [ -f "${logocc}" ]; then
+            grep 'User comment' "${logocc}"
+            # Count read back errors
+            countRBErrors "${logocc}"
+        else
+            echo "No occupancy log file found: ${logocc}"
+        fi
+        echo
+
+        # Readback errors
+        echo "Readback errors:"
+
+
+        # Next hybrid
+        echo ==================================================================
+    done
+}
+
+parseOptions(){
+
+    OPT=$(getopt \
+        --options hld: \
+        --name "$0" \
+        -- "$@"
+    )
+
+    if [ $? -ne 0 ]; then
+        err=true
+    fi
+
+    eval set -- "${OPT}"
+
+    while true; do
+        case "${1}" in
+            -h) usage; exit 0;;
+            -l) long=true; shift 1;;
+            -d) dir="${2}"; shift 2;;
+            --) shift; break;;
+        esac
+    done
+
+    if [ "${err}" = true ]; then
+        usage
+        exit 1
+    fi
+
+    if [ "${long}" = true ]; then
+        repLong
+    else
+        repShort
+    fi
+}
+
+parseOptions "$@"

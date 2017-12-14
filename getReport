@@ -20,7 +20,7 @@ usage(){
 countRBErrors(){
     local log="${1}"
     # Use awk to count all readback errors
-    grep 'There were [0-9]* Readback Errors' "${log}"
+    #grep 'There were [0-9]* Readback Errors' "${log}"
     rbe=$(awk '/There were [0-9]* Readback Errors/{
         rbe += gensub("^.*There were ([0-9]*) Readback Errors.*$", "\\1", "g", $0)
     }END{

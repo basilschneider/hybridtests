@@ -121,7 +121,7 @@ repShort(){
         echo
 
         # Readback errors
-        echo "Readback errors:"
+        echo "Readback errors: ${rbErrors}"
 
 
         # Next hybrid

@@ -1,0 +1,6 @@
+15.12.2017 15:00 ||I| Creating directory: Results/Calibration_Electron_15-12-17_15:00:05
+Info in <TCivetweb::Create>: Starting HTTP server on port 8082
+Error in <TCivetweb::Log>: set_ports_option: cannot bind to 8082: 98 (Address already in use)
+15.12.2017 15:00 ||I| Opening THttpServer on port 8082. Point your browser to: [1m[32mtestsystem2:8082[0m
+terminate called after throwing an instance of 'Ph2_HwInterface::Exception'
+  what():  CBCInterfaceToo many CBC readback errors - no functional I2C communication. Check the Setup

@@ -1,0 +1,3 @@
+Serial: GS8XU_6002
+Batch: Good
+Current at startup: 412.3 mA

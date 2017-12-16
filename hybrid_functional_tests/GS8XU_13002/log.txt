@@ -1,0 +1,3 @@
+Serial: GS8XU_13002
+Batch: Bad
+Current at startup: 314.8 mA

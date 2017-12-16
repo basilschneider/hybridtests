@@ -1,0 +1,4 @@
+Serial: GS8XU_3006
+Batch: Good
+Current at startup: 421.7 mA
+Current while busy: 559.7 mA

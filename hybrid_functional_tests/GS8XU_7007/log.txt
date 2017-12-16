@@ -1,0 +1,3 @@
+Serial: GS8XU_7007
+Batch: Bad
+Current at startup: 352.5 mA

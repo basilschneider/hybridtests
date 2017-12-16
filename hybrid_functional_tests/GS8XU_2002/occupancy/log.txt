@@ -1,0 +1,107 @@
+15.12.2017 10:54 ||I| 
+
+
+********************************************************************************
+                                        [1m[31mHW SUMMARY: [0m
+********************************************************************************
+
+[1m[36m|----BeBoard  Id :0[0m
+[1m[36m|	|----FW_Version NCbcDataSize: 8[0m
+[1m[34m	|----Board Id: [1m[33mboard[1m[34m URI: [1m[33mipbusudp-2.0://192.168.000.175:50001[1m[34m Address Table: [1m[33mfile://settings/address_table_8CBC.xml
+[1m[34m Type: [1m[33mGLIB[0m
+[1m[36m|	|----Module  FeId :0[0m
+[32m|	|	|----CBC Files Path : hybrid_functional_tests/GS8XU_2002/calibration/Calibration_Electron_15-12-17_10:51:29/[0m
+[1m[36m|	|	|----CBC  Id :0, File: FE0CBC0.txt[0m
+[32m|	|	|----Global_CBC_Register  name :VCth =  0x78[0m
+[32m|	|	|----Global_CBC_Register  name :MiscTestPulseCtrl&AnalogMux =  0x21[0m
+[32m|	|	|----Global_CBC_Register  name :TestPulsePot =  0x60[0m
+[32m|	|	|----Global_CBC_Register  name :TriggerLatency =  0x03[0m
+[1m[36m|	|	|----CBC  Id :1, File: FE0CBC1.txt[0m
+[32m|	|	|----Global_CBC_Register  name :VCth =  0x78[0m
+[32m|	|	|----Global_CBC_Register  name :MiscTestPulseCtrl&AnalogMux =  0x21[0m
+[32m|	|	|----Global_CBC_Register  name :TestPulsePot =  0x60[0m
+[32m|	|	|----Global_CBC_Register  name :TriggerLatency =  0x03[0m
+[1m[36m|	|	|----CBC  Id :2, File: FE0CBC2.txt[0m
+[32m|	|	|----Global_CBC_Register  name :VCth =  0x78[0m
+[32m|	|	|----Global_CBC_Register  name :MiscTestPulseCtrl&AnalogMux =  0x21[0m
+[32m|	|	|----Global_CBC_Register  name :TestPulsePot =  0x60[0m
+[32m|	|	|----Global_CBC_Register  name :TriggerLatency =  0x03[0m
+[1m[36m|	|	|----CBC  Id :3, File: FE0CBC3.txt[0m
+[32m|	|	|----Global_CBC_Register  name :VCth =  0x78[0m
+[32m|	|	|----Global_CBC_Register  name :MiscTestPulseCtrl&AnalogMux =  0x21[0m
+[32m|	|	|----Global_CBC_Register  name :TestPulsePot =  0x60[0m
+[32m|	|	|----Global_CBC_Register  name :TriggerLatency =  0x03[0m
+[1m[36m|	|	|----CBC  Id :4, File: FE0CBC4.txt[0m
+[32m|	|	|----Global_CBC_Register  name :VCth =  0x78[0m
+[32m|	|	|----Global_CBC_Register  name :MiscTestPulseCtrl&AnalogMux =  0x21[0m
+[32m|	|	|----Global_CBC_Register  name :TestPulsePot =  0x60[0m
+[32m|	|	|----Global_CBC_Register  name :TriggerLatency =  0x03[0m
+[1m[36m|	|	|----CBC  Id :5, File: FE0CBC5.txt[0m
+[32m|	|	|----Global_CBC_Register  name :VCth =  0x78[0m
+[32m|	|	|----Global_CBC_Register  name :MiscTestPulseCtrl&AnalogMux =  0x21[0m
+[32m|	|	|----Global_CBC_Register  name :TestPulsePot =  0x60[0m
+[32m|	|	|----Global_CBC_Register  name :TriggerLatency =  0x03[0m
+[1m[36m|	|	|----CBC  Id :6, File: FE0CBC6.txt[0m
+[32m|	|	|----Global_CBC_Register  name :VCth =  0x78[0m
+[32m|	|	|----Global_CBC_Register  name :MiscTestPulseCtrl&AnalogMux =  0x21[0m
+[32m|	|	|----Global_CBC_Register  name :TestPulsePot =  0x60[0m
+[32m|	|	|----Global_CBC_Register  name :TriggerLatency =  0x03[0m
+[1m[36m|	|	|----CBC  Id :7, File: FE0CBC7.txt[0m
+[32m|	|	|----Global_CBC_Register  name :VCth =  0x78[0m
+[32m|	|	|----Global_CBC_Register  name :MiscTestPulseCtrl&AnalogMux =  0x21[0m
+[32m|	|	|----Global_CBC_Register  name :TestPulsePot =  0x60[0m
+[32m|	|	|----Global_CBC_Register  name :TriggerLatency =  0x03[0m
+
+
+********************************************************************************
+                                        [1m[31mEND OF HW SUMMARY: [0m
+********************************************************************************
+
+
+[31mSetting[0m --[1m[36mHoleMode[0m:[1m[33m0[0m
+[31mSetting[0m --[1m[36mThreshold_NSigmas[0m:[1m[33m4[0m
+[31mSetting[0m --[1m[36mNevents[0m:[1m[33m100[0m
+[31mSetting[0m --[1m[36mTestPulseAmplitude[0m:[1m[33m0[0m
+[31mSetting[0m --[1m[36mFitSCurves[0m:[1m[33m1[0m
+
+15.12.2017 10:54 ||E| Histo Map for CBC 0 (FE 0) does not exist - creating 
+15.12.2017 10:54 ||E| Histo Map for CBC 1 (FE 0) does not exist - creating 
+15.12.2017 10:54 ||E| Histo Map for CBC 2 (FE 0) does not exist - creating 
+15.12.2017 10:54 ||E| Histo Map for CBC 3 (FE 0) does not exist - creating 
+15.12.2017 10:54 ||E| Histo Map for CBC 4 (FE 0) does not exist - creating 
+15.12.2017 10:54 ||E| Histo Map for CBC 5 (FE 0) does not exist - creating 
+15.12.2017 10:54 ||E| Histo Map for CBC 6 (FE 0) does not exist - creating 
+15.12.2017 10:54 ||E| Histo Map for CBC 7 (FE 0) does not exist - creating 
+15.12.2017 10:54 ||I| Creating directory: Results/HybridTest_Electron_15-12-17_10:54:12
+Info in <TCivetweb::Create>: Starting HTTP server on port 8082
+Error in <TCivetweb::Log>: set_ports_option: cannot bind to 8082: 98 (Address already in use)
+15.12.2017 10:54 ||I| Opening THttpServer on port 8082. Point your browser to: [1m[32mtestsystem2:8082[0m
+15.12.2017 10:54 ||I| 
+[1m[34mConfiguring HW parsed from .xml file: [0m
+[32mOverriding GLIB register values for signal polarity with value from settings node![0m
+[32mSuccessfully configured Board 0[0m
+[32mSuccessfully configured Cbc 0[0m
+[32mSuccessfully configured Cbc 1[0m
+[32mSuccessfully configured Cbc 2[0m
+[32mSuccessfully configured Cbc 3[0m
+[32mSuccessfully configured Cbc 4[0m
+[32mSuccessfully configured Cbc 5[0m
+[32mSuccessfully configured Cbc 6[0m
+[32mSuccessfully configured Cbc 7[0m
+
+15.12.2017 10:54 ||I| Mesuring Efficiency per Strip ... 
+15.12.2017 10:54 ||I| Taking data with 100 Events!
+15.12.2017 10:54 ||I| Reading Reg [31mVCth[0m on CBC 0 memory value: 120 read value: 120
+15.12.2017 10:54 ||I| Reading Reg [31mVCth[0m on CBC 1 memory value: 120 read value: 120
+15.12.2017 10:54 ||I| Reading Reg [31mVCth[0m on CBC 2 memory value: 120 read value: 120
+15.12.2017 10:54 ||I| Reading Reg [31mVCth[0m on CBC 3 memory value: 120 read value: 120
+15.12.2017 10:54 ||I| Reading Reg [31mVCth[0m on CBC 4 memory value: 120 read value: 120
+15.12.2017 10:54 ||I| Reading Reg [31mVCth[0m on CBC 5 memory value: 120 read value: 120
+15.12.2017 10:54 ||I| Reading Reg [31mVCth[0m on CBC 6 memory value: 120 read value: 120
+15.12.2017 10:54 ||I| Reading Reg [31mVCth[0m on CBC 7 memory value: 120 read value: 120
+15.12.2017 10:54 ||I| 		Mean occupancy for the Top side: 57.7399 ± 13.2346[0m
+15.12.2017 10:54 ||I| 		Mean occupancy for the Botton side: 57.3813 ± 13.143[0m
+15.12.2017 10:54 ||I| [1m[34mResults of occupancy measured written to Results/HybridTest_Electron_15-12-17_10:54:12/Summary.root[0m
+Info in <TCanvas::Print>: pdf file Results/HybridTest_Electron_15-12-17_10:54:12/HybridTestResults.pdf has been created
+Info in <TCanvas::Print>: pdf file Results/HybridTest_Electron_15-12-17_10:54:12/NoiseOccupancySummary.pdf has been created
+User comment: 

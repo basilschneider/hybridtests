@@ -47,6 +47,60 @@ Readback errors: 0
 ==================================================================
 
 General information:
+Serial: GS8XU_10003
+Batch: Good
+Current at startup: 426.2 mA
+Current while busy: 569.9 mA
+
+Calibration results:
+User comment: 
+
+Register read/write tests:
+All registers fine on CBC0
+All registers fine on CBC1
+All registers fine on CBC2
+All registers fine on CBC3
+All registers fine on CBC4
+All registers fine on CBC5
+All registers fine on CBC6
+All registers fine on CBC7
+User comment: 
+
+Shorts finding tests:
+Sides: Top - 0	Bottom - 1 (Channel numbering starts from 0)
+
+      Side	| Channel_ID	| Group_ID	| Shorted_With_Group_ID
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+
+19.12.2017 11:04 ||I| 
+---------Creating shorted pairs-----------------
+---------Merging shorts-------------------------
+Number of shorted connections found: 0
+---------Outcome--------------------------------
+
+User comment: 
+
+Antenna tests:
+Open channels on TOP: 528; 529;
+Open channels on BOTTOM: 498; 576; 583; 585;
+Total number of open channels found in the hybrid: 6
+User comment: 
+
+Occupancy tests:
+User comment: 
+
+Readback errors: 0
+
+==================================================================
+
+General information:
 Serial: GS8XU_10004
 Batch: Good
 Current at startup: 428.7 mA
@@ -509,6 +563,60 @@ No antenna log file found: hybrid_functional_tests/GS8XU_13004/antenna/log.txt
 
 Occupancy tests:
 No occupancy log file found: hybrid_functional_tests/GS8XU_13004/occupancy/log.txt
+
+Readback errors: 0
+
+==================================================================
+
+General information:
+Serial: GS8XU_13005
+Batch: Good
+Current at startup: 432.9 mA
+Current while busy: 573.6 mA
+
+Calibration results:
+User comment: 
+
+Register read/write tests:
+All registers fine on CBC0
+All registers fine on CBC1
+All registers fine on CBC2
+All registers fine on CBC3
+All registers fine on CBC4
+All registers fine on CBC5
+All registers fine on CBC6
+All registers fine on CBC7
+User comment: 
+
+Shorts finding tests:
+Sides: Top - 0	Bottom - 1 (Channel numbering starts from 0)
+
+      Side	| Channel_ID	| Group_ID	| Shorted_With_Group_ID
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+
+19.12.2017 11:21 ||I| 
+---------Creating shorted pairs-----------------
+---------Merging shorts-------------------------
+Number of shorted connections found: 0
+---------Outcome--------------------------------
+
+User comment: 
+
+Antenna tests:
+Open channels on TOP: 616; 763; 765; 768; 769; 771; 775; 776; 777;
+Open channels on BOTTOM: 775; 777; 778; 781;
+Total number of open channels found in the hybrid: 13
+User comment: 
+
+Occupancy tests:
+User comment: 
 
 Readback errors: 0
 
@@ -1202,6 +1310,60 @@ Occupancy tests:
 User comment: There was a readback error during measurement.
 
 Readback errors: 13
+
+==================================================================
+
+General information:
+Serial: GS8XU_2006
+Batch: Good
+Current at startup: 426.3 mA
+Current while busy: 566.1 mA
+
+Calibration results:
+User comment: Had to calibrate three times to get a nice calibration.
+
+Register read/write tests:
+All registers fine on CBC0
+All registers fine on CBC1
+All registers fine on CBC2
+All registers fine on CBC3
+All registers fine on CBC4
+All registers fine on CBC5
+All registers fine on CBC6
+All registers fine on CBC7
+User comment: 
+
+Shorts finding tests:
+Sides: Top - 0	Bottom - 1 (Channel numbering starts from 0)
+
+      Side	| Channel_ID	| Group_ID	| Shorted_With_Group_ID
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+
+19.12.2017 10:53 ||I| 
+---------Creating shorted pairs-----------------
+---------Merging shorts-------------------------
+Number of shorted connections found: 0
+---------Outcome--------------------------------
+
+User comment: 
+
+Antenna tests:
+Open channels on TOP:
+Open channels on BOTTOM:
+Total number of open channels found in the hybrid: 0
+User comment: 
+
+Occupancy tests:
+User comment: 
+
+Readback errors: 2
 
 ==================================================================
 
@@ -6064,6 +6226,60 @@ Antenna tests:
 Open channels on TOP:
 Open channels on BOTTOM:
 Total number of open channels found in the hybrid: 0
+User comment: 
+
+Occupancy tests:
+User comment: 
+
+Readback errors: 0
+
+==================================================================
+
+General information:
+Serial: GS8XU_5006
+Batch: Good
+Current at startup: 426.9 mA
+Current while busy: 571.2 mA
+
+Calibration results:
+User comment: 
+
+Register read/write tests:
+All registers fine on CBC0
+All registers fine on CBC1
+All registers fine on CBC2
+All registers fine on CBC3
+All registers fine on CBC4
+All registers fine on CBC5
+All registers fine on CBC6
+All registers fine on CBC7
+User comment: 
+
+Shorts finding tests:
+Sides: Top - 0	Bottom - 1 (Channel numbering starts from 0)
+
+      Side	| Channel_ID	| Group_ID	| Shorted_With_Group_ID
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+------------------------------------------------------------------------
+
+19.12.2017 11:11 ||I| 
+---------Creating shorted pairs-----------------
+---------Merging shorts-------------------------
+Number of shorted connections found: 0
+---------Outcome--------------------------------
+
+User comment: 
+
+Antenna tests:
+Open channels on TOP: 467; 507; 592;
+Open channels on BOTTOM: 468; 478; 576; 580; 583; 585; 586; 590;
+Total number of open channels found in the hybrid: 11
 User comment: 
 
 Occupancy tests:

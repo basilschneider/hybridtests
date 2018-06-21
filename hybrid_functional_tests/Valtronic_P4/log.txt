@@ -1,0 +1,4 @@
+Serial: Valtronic_P4
+Batch: Good
+Current at startup: 112.4 mA
+Current while busy: 160.2 mA

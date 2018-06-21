@@ -1,0 +1,4 @@
+Serial: Valtronic_P7
+Batch: Good
+Current at startup: 106.5 mA
+Current while busy: 152.4 mA

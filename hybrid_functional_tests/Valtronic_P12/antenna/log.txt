@@ -1,0 +1,116 @@
+21.12.2017 17:28 ||I| 
+
+
+********************************************************************************
+                                        [1m[31mHW SUMMARY: [0m
+********************************************************************************
+
+[1m[36m|----BeBoard  Id :0[0m
+[1m[36m|	|----FW_Version NCbcDataSize: 4[0m
+[1m[34m	|----Board Id: [1m[33mboard[1m[34m URI: [1m[33mchtcp-2.0://localhost:10203?target=192.168.0.175:50001[1m[34m Address Table: [1m[33mfile://settings/address_table_2CBC.xml
+[1m[34m Type: [1m[33mGLIB[0m
+[1m[36m|	|----Module  FeId :0[0m
+[32m|	|	|----CBC Files Path : hybrid_functional_tests/Valtronic_P12/calibration/Calibration_Hole_21-12-17_17:24/[0m
+[1m[36m|	|	|----CBC  Id :0, File: FE0CBC0.txt[0m
+[32m|	|	|----Global_CBC_Register  name :VCth =  0x88[0m
+[32m|	|	|----Global_CBC_Register  name :TestPulsePot =  0x60[0m
+[32m|	|	|----Global_CBC_Register  name :MiscTestPulseCtrl&AnalogMux =  0x21[0m
+[32m|	|	|----Global_CBC_Register  name :TriggerLatency =  0x01[0m
+[1m[36m|	|	|----CBC  Id :1, File: FE0CBC1.txt[0m
+[32m|	|	|----Global_CBC_Register  name :VCth =  0x88[0m
+[32m|	|	|----Global_CBC_Register  name :TestPulsePot =  0x60[0m
+[32m|	|	|----Global_CBC_Register  name :MiscTestPulseCtrl&AnalogMux =  0x21[0m
+[32m|	|	|----Global_CBC_Register  name :TriggerLatency =  0x01[0m
+
+
+********************************************************************************
+                                        [1m[31mEND OF HW SUMMARY: [0m
+********************************************************************************
+
+
+[31mSetting[0m --[1m[36mNevents[0m:[1m[33m100[0m
+[31mSetting[0m --[1m[36mHoleMode[0m:[1m[33m1[0m
+[31mSetting[0m --[1m[36mThreshold_NSigmas[0m:[1m[33m4[0m
+[31mSetting[0m --[1m[36mTargetVcth[0m:[1m[33m120[0m
+[31mSetting[0m --[1m[36mTargetOffset[0m:[1m[33m80[0m
+[31mSetting[0m --[1m[36mTestPulsePotentiometer[0m:[1m[33m0[0m
+[31mSetting[0m --[1m[36mVerificationLoop[0m:[1m[33m1[0m
+
+21.12.2017 17:28 ||E| Histo Map for CBC 0 (FE 0) does not exist - creating 
+21.12.2017 17:28 ||E| Histo Map for CBC 1 (FE 0) does not exist - creating 
+21.12.2017 17:28 ||I| Creating directory: Results/HybridTest_Hole_21-12-17_17:28
+Info in <TCivetweb::Create>: Starting HTTP server on port 8082
+21.12.2017 17:28 ||I| Opening THttpServer on port 8082. Point your browser to: [1m[32mtestsystem2:8082[0m
+21.12.2017 17:28 ||I| 
+[1m[34mConfiguring HW parsed from .xml file: [0m
+[32mOverriding GLIB register values for signal polarity with value from settings node![0m
+[32mSuccessfully configured Board 0[0m
+[32mSuccessfully configured Cbc 0[0m
+[32mSuccessfully configured Cbc 1[0m
+
+21.12.2017 17:28 ||I| Mesuring Efficiency per Strip ... 
+21.12.2017 17:28 ||I| Taking data with 100 Events!
+21.12.2017 17:28 ||I| Reading Reg [31mVCth[0m on CBC 0 memory value: 136 read value: 136
+21.12.2017 17:28 ||I| Reading Reg [31mVCth[0m on CBC 1 memory value: 136 read value: 136
+usb_set_debug: Setting debugging level to 255 (on)
+usb_os_init: Found USB VFS at /dev/bus/usb
+usb_os_find_busses: Found 004
+usb_os_find_busses: Found 003
+usb_os_find_busses: Found 002
+usb_os_find_busses: Found 001
+usb_os_find_devices: Found 001 on 004
+usb_os_find_devices: Found 001 on 003
+usb_os_find_devices: Found 004 on 002
+skipped 1 class/vendor specific interface descriptors
+skipped 1 class/vendor specific interface descriptors
+usb_os_find_devices: Found 003 on 002
+usb_os_find_devices: Found 002 on 002
+usb_os_find_devices: Found 001 on 002
+error obtaining child information: Inappropriate ioctl for device
+error obtaining child information: Inappropriate ioctl for device
+usb_os_find_devices: Found 023 on 001
+usb_os_find_devices: Found 008 on 001
+skipped 1 class/vendor specific interface descriptors
+skipped 1 class/vendor specific interface descriptors
+usb_os_find_devices: Found 006 on 001
+skipped 1 class/vendor specific interface descriptors
+skipped 1 class/vendor specific interface descriptors
+usb_os_find_devices: Found 005 on 001
+usb_os_find_devices: Found 004 on 001
+usb_os_find_devices: Found 003 on 001
+skipped 4 class/vendor specific interface descriptors
+usb_os_find_devices: Found 002 on 001
+usb_os_find_devices: Found 001 on 001
+error obtaining child information: Inappropriate ioctl for device
+error obtaining child information: Inappropriate ioctl for device
+error obtaining child information: Inappropriate ioctl for device
+error obtaining child information: Inappropriate ioctl for device
+error obtaining child information: Inappropriate ioctl for device
+antenna_usb_handle with Vendor Id: 4292 and Product Id: 34720 found 
+Results of clock frequency generator byte 0: 10
+Results of digital potentiometer 0: 11
+AMUX0 channel: 1
+AMUX0 channel: 2
+AMUX0 channel: 3
+AMUX0 channel: 4
+AMUX0 channel: 5
+AMUX0 channel: 6
+AMUX0 channel: 7
+AMUX0 channel: 8
+AMUX1 channel: 1
+AMUX1 channel: 2
+AMUX1 channel: 3
+AMUX1 channel: 4
+AMUX1 channel: 5
+AMUX1 channel: 6
+AMUX1 channel: 7
+AMUX1 channel: 8
+Open channels: 147; 157; 171; 186; 197; 204; 210; 234; 246;
+Total number of open channels found in the hybrid: 9
+21.12.2017 17:28 ||I| 
+Summary testing report written to: 
+Results/HybridTestingDatabase/Hybrid_ID-1_on_21-12-17_17:28.txt
+21.12.2017 17:28 ||I| [1m[34mResults of occupancy measured written to Results/HybridTest_Hole_21-12-17_17:28/Summary.root[0m
+Info in <TCanvas::Print>: pdf file Results/HybridTest_Hole_21-12-17_17:28/HybridTestResults.pdf has been created
+Info in <TCanvas::Print>: pdf file Results/HybridTest_Hole_21-12-17_17:28/NoiseOccupancySummary.pdf has been created
+User comment: The found opens are the same as in the previous tests.

@@ -1,0 +1,5 @@
+22.12.2017 11:20 ||I| Creating directory: Results/Calibration_Hole_22-12-17_11:20
+Info in <TCivetweb::Create>: Starting HTTP server on port 8082
+22.12.2017 11:20 ||I| Opening THttpServer on port 8082. Point your browser to: [1m[32mtestsystem2:8082[0m
+terminate called after throwing an instance of 'Ph2_HwInterface::Exception'
+  what():  CBCInterfaceToo many CBC readback errors - no functional I2C communication. Check the Setup

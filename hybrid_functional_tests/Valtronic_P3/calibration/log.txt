@@ -1,0 +1,147 @@
+22.12.2017 10:29 ||I| Creating directory: Results/Calibration_Hole_22-12-17_10:29
+Info in <TCivetweb::Create>: Starting HTTP server on port 8082
+22.12.2017 10:29 ||I| Opening THttpServer on port 8082. Point your browser to: [1m[32mtestsystem2:8082[0m
+22.12.2017 10:29 ||I| 
+
+
+********************************************************************************
+                                        [1m[31mHW SUMMARY: [0m
+********************************************************************************
+
+[1m[36m|----BeBoard  Id :0[0m
+[1m[36m|	|----FW_Version NCbcDataSize: 4[0m
+[1m[34m	|----Board Id: [1m[33mboard[1m[34m URI: [1m[33mchtcp-2.0://localhost:10203?target=192.168.0.175:50001[1m[34m Address Table: [1m[33mfile://settings/address_table_2CBC.xml
+[1m[34m Type: [1m[33mGLIB[0m
+[1m[36m|	|----Module  FeId :0[0m
+[1m[36m|	|	|----CBC  Id :0, File: ./settings/Cbc_default_hole.txt[0m
+[32m|	|	|----Global_CBC_Register  name :MiscTestPulseCtrl&AnalogMux =  0x21[0m
+[1m[36m|	|	|----CBC  Id :1, File: ./settings/Cbc_default_hole.txt[0m
+[32m|	|	|----Global_CBC_Register  name :MiscTestPulseCtrl&AnalogMux =  0x21[0m
+
+
+********************************************************************************
+                                        [1m[31mEND OF HW SUMMARY: [0m
+********************************************************************************
+
+
+[31mSetting[0m --[1m[36mTargetVcth[0m:[1m[33m120[0m
+[31mSetting[0m --[1m[36mTargetOffset[0m:[1m[33m80[0m
+[31mSetting[0m --[1m[36mNevents[0m:[1m[33m100[0m
+[31mSetting[0m --[1m[36mTestPulsePotentiometer[0m:[1m[33m0[0m
+[31mSetting[0m --[1m[36mHoleMode[0m:[1m[33m1[0m
+[31mSetting[0m --[1m[36mVerificationLoop[0m:[1m[33m1[0m
+
+[1m[34mConfiguring HW parsed from .xml file: [0m
+[32mOverriding GLIB register values for signal polarity with value from settings node![0m
+[32mSuccessfully configured Board 0[0m
+[32mSuccessfully configured Cbc 0[0m
+[32mSuccessfully configured Cbc 1[0m
+
+22.12.2017 10:29 ||E| Histo Map for CBC 0 (FE 0) does not exist - creating 
+22.12.2017 10:29 ||E| Histo Map for CBC 1 (FE 0) does not exist - creating 
+22.12.2017 10:29 ||I| Created Object Maps and parsed settings:
+22.12.2017 10:29 ||I| 	Hole Mode = 1
+22.12.2017 10:29 ||I| 	Nevents = 100
+22.12.2017 10:29 ||I| 	TargetVcth = 120
+22.12.2017 10:29 ||I| 	TargetOffset = 80
+22.12.2017 10:29 ||I| 	TestPulseAmplitude = 0
+22.12.2017 10:29 ||I| [1m[34mExtracting Vplus ...[0m
+22.12.2017 10:29 ||I| [32mEnabling Test Group....-1[0m
+22.12.2017 10:29 ||I| [1m[34mFound Occupancy of [1m[31m0.532795[1m[34m for CBC 0 , test Group -1 using VPlus [1m[31m98[1m[34m (= 0x62; 0b01100010)[0m
+22.12.2017 10:29 ||I| [1m[34mFound Occupancy of [1m[31m0.512953[1m[34m for CBC 1 , test Group -1 using VPlus [1m[31m81[1m[34m (= 0x51; 0b01010001)[0m
+22.12.2017 10:29 ||I| [31mDisabling Test Group....-1[0m
+22.12.2017 10:29 ||I| [1m[32mMean Vplus value for FE 0 CBC 0 is [1m[31m98[0m
+22.12.2017 10:29 ||I| [1m[32mMean Vplus value for FE 0 CBC 1 is [1m[31m81[0m
+22.12.2017 10:29 ||I| [32mEnabling Test Group....0[0m
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 7
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 6
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 5
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 4
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 3
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 2
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 1
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 0
+22.12.2017 10:29 ||I| Verifying Occupancy with final offsets by taking 300 Triggers!
+22.12.2017 10:29 ||I| [31mDisabling Test Group....0[0m
+22.12.2017 10:29 ||I| [32mEnabling Test Group....1[0m
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 7
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 6
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 5
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 4
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 3
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 2
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 1
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 0
+22.12.2017 10:29 ||I| Verifying Occupancy with final offsets by taking 300 Triggers!
+22.12.2017 10:29 ||I| [31mDisabling Test Group....1[0m
+22.12.2017 10:29 ||I| [32mEnabling Test Group....2[0m
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 7
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 6
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 5
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 4
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 3
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 2
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 1
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 0
+22.12.2017 10:29 ||I| Verifying Occupancy with final offsets by taking 300 Triggers!
+22.12.2017 10:29 ||I| [31mDisabling Test Group....2[0m
+22.12.2017 10:29 ||I| [32mEnabling Test Group....3[0m
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 7
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 6
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 5
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 4
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 3
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 2
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 1
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 0
+22.12.2017 10:29 ||I| Verifying Occupancy with final offsets by taking 300 Triggers!
+22.12.2017 10:29 ||I| [31mDisabling Test Group....3[0m
+22.12.2017 10:29 ||I| [32mEnabling Test Group....4[0m
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 7
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 6
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 5
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 4
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 3
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 2
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 1
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 0
+22.12.2017 10:29 ||I| Verifying Occupancy with final offsets by taking 300 Triggers!
+22.12.2017 10:29 ||I| [31mDisabling Test Group....4[0m
+22.12.2017 10:29 ||I| [32mEnabling Test Group....5[0m
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 7
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 6
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 5
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 4
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 3
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 2
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 1
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 0
+22.12.2017 10:29 ||I| Verifying Occupancy with final offsets by taking 300 Triggers!
+22.12.2017 10:29 ||I| [31mDisabling Test Group....5[0m
+22.12.2017 10:29 ||I| [32mEnabling Test Group....6[0m
+22.12.2017 10:29 ||I| Searching for the correct offsets by flipping bit 7
+22.12.2017 10:30 ||I| Searching for the correct offsets by flipping bit 6
+22.12.2017 10:30 ||I| Searching for the correct offsets by flipping bit 5
+22.12.2017 10:30 ||I| Searching for the correct offsets by flipping bit 4
+22.12.2017 10:30 ||I| Searching for the correct offsets by flipping bit 3
+22.12.2017 10:30 ||I| Searching for the correct offsets by flipping bit 2
+22.12.2017 10:30 ||I| Searching for the correct offsets by flipping bit 1
+22.12.2017 10:30 ||I| Searching for the correct offsets by flipping bit 0
+22.12.2017 10:30 ||I| Verifying Occupancy with final offsets by taking 300 Triggers!
+22.12.2017 10:30 ||I| [31mDisabling Test Group....6[0m
+22.12.2017 10:30 ||I| [32mEnabling Test Group....7[0m
+22.12.2017 10:30 ||I| Searching for the correct offsets by flipping bit 7
+22.12.2017 10:30 ||I| Searching for the correct offsets by flipping bit 6
+22.12.2017 10:30 ||I| Searching for the correct offsets by flipping bit 5
+22.12.2017 10:30 ||I| Searching for the correct offsets by flipping bit 4
+22.12.2017 10:30 ||I| Searching for the correct offsets by flipping bit 3
+22.12.2017 10:30 ||I| Searching for the correct offsets by flipping bit 2
+22.12.2017 10:30 ||I| Searching for the correct offsets by flipping bit 1
+22.12.2017 10:30 ||I| Searching for the correct offsets by flipping bit 0
+22.12.2017 10:30 ||I| Verifying Occupancy with final offsets by taking 300 Triggers!
+22.12.2017 10:30 ||I| [31mDisabling Test Group....7[0m
+22.12.2017 10:30 ||I| [1m[34mConfigfiles for all Cbcs written to Results/Calibration_Hole_22-12-17_10:29[0m
+Time to Calibrate the system:  finished at: Fri Dec 22 10:30:06 2017
+	elapsed time: 30.9725 seconds
+22.12.2017 10:30 ||I| Results saved!
+User comment: Calibration results seem correct.

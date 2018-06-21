@@ -1,0 +1,4 @@
+Serial: Valtronic_P12
+Batch: Good
+Current at startup: 108.5 mA
+Current while busy: 154.5 mA

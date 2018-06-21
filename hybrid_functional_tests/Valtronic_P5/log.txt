@@ -1,0 +1,4 @@
+Serial: Valtronic_P5
+Batch: Good
+Current at startup: 105.4 mA
+Current while busy: 151.6 mA

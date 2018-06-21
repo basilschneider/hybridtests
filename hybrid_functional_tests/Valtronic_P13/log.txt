@@ -1,0 +1,4 @@
+Serial: Valtronic_P13
+Batch: Good
+Current at startup: 105.4 mA
+Current while busy: 153.5 mA

@@ -1,0 +1,3 @@
+Serial: Valtronic_P15
+Batch: Bad
+Current at startup: 98.5 mA

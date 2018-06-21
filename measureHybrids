@@ -15,7 +15,8 @@
 
 outdir=hybrid_functional_tests
 logname=log.txt
-cfghybrid=settings/HybridTest8CBC.xml
+cfgcalibrate=settings/Calibration2CBC.xml
+cfghybrid=settings/HybridTest2CBC.xml
 
 askYN(){
     y="Yes, continue!"
@@ -117,7 +118,7 @@ echo "Current at startup: ${current} mA" >> "${logparent}"
 # Calibration
 while
     echo "Running calibration"
-    calibrate 2>&1 | tee "${logcal}"
+    calibrate -f "${cfgcalibrate}" 2>&1 | tee "${logcal}"
     echo "Do you want to keep that measurement?"
     askYNR
 do
@@ -136,7 +137,7 @@ sed -i '/CBC_Files/s@"[^"]*"@"'${dircalres}'/"@' "${cfghybrid}"
 # Test registers of chips
 while
     echo "Running registers test"
-    hybridtest -r 2>&1 | tee "${logreg}"
+    hybridtest -f "${cfghybrid}" -r 2>&1 | tee "${logreg}"
     echo "Do you want to keep that measurement?"
     askYNR
 do
@@ -150,7 +151,7 @@ mv "$(ls -1dt Results/HybridTest_* | head -1)" "${dirreg}"
 # Test shorts on hybrid
 while
     echo "Running shorts test"
-    hybridtest -t 2>&1 | tee "${logshr}"
+    hybridtest -f "${cfghybrid}" -t 2>&1 | tee "${logshr}"
     echo "Do you want to keep that measurement?"
     askYNR
 do
@@ -166,7 +167,7 @@ echo "Have you turned on the signal generator for the antenna test?"
 askYN
 while
     echo "Running antenna test"
-    hybridtest -a 2>&1 | tee "${logant}"
+    hybridtest -f "${cfghybrid}" -a 2>&1 | tee "${logant}"
     echo "Do you want to keep that measurement?"
     askYNR
 do
@@ -184,7 +185,7 @@ askYN
 # Measure occupancy
 while
     echo "Measuring occupancy"
-    hybridtest 2>&1 | tee "${logocc}"
+    hybridtest -f "${cfghybrid}" 2>&1 | tee "${logocc}"
     echo "Do you want to keep that measurement?"
     askYNR
 do

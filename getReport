@@ -99,8 +99,10 @@ repShort(){
         # Antenna tests
         echo "Antenna tests:"
         if [ -f "${logant}" ]; then
-            sed -n '/Open channels on TOP:/,/Total number of open channels/p' \
-                "${logant}"
+            #sed -n '/Open channels on TOP:/,/Total number of open channels/p' \
+            #    "${logant}"
+	    grep 'Open channels:' "${logant}"
+            grep 'Total number of open channels found' "${logant}"
             grep 'User comment' "${logant}"
             # Count read back errors
             countRBErrors "${logant}"

@@ -10,8 +10,8 @@
 # timestamps. This is fairly failsafe. A nicer solution, though, would be to
 # parse the output of the Middleware to a separate file descriptor and get the
 # filename like this
-# TODO: To get the latest folder, I parse ls, which is not nice. Fixing the TODO
-# just above this one, would also fix this TODO
+# TODO: To get the latest folder, I parse ls, which is bad practice. Fixing the
+# TODO just above this one, would also fix this one
 
 outdir=hybrid_functional_tests
 logname=log.txt
@@ -104,6 +104,10 @@ mkdir -p "${dircal}" "${dirreg}" "${dirshr}" "${dirant}" "${dirocc}"
 
 # Write serial number in log file
 echo "Serial: ${hybridname}" >> "${logparent}"
+
+# Copy xml's to output directory
+cp "${cfgcalibrate}" "${dirparent}"
+cp "${cfghybrid}" "${dirparent}"
 
 # Ask if this hybrid is from a good or bad batch
 echo "Is this hybrid from the good or the bad batch, as defined by "

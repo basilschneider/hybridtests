@@ -183,6 +183,8 @@ mv "$(ls -1dt Results/HybridTest_* | head -1)" "${dirant}"
 #askYN
 
 # Measure occupancy
+# Set threshold from 0x88 to 0x78
+sed -i '/VCth/s/0x88/0x78/' "${cfghybrid}"
 while
     echo "Measuring occupancy"
     hybridtest -f "${cfghybrid}" 2>&1 | tee "${logocc}"
@@ -191,6 +193,8 @@ while
 do
     :
 done
+# Set threshold back to 0x88
+sed -i '/VCth/s/0x78/0x88/' "${cfghybrid}"
 askComment "${logocc}"
 
 # Move results

@@ -163,8 +163,8 @@ askComment "${logshr}"
 mv "$(ls -1dt Results/HybridTest_* | head -1)" "${dirshr}"
 
 # Antenna test
-echo "Have you turned on the signal generator for the antenna test?"
-askYN
+#echo "Have you turned on the signal generator for the antenna test?"
+#askYN
 while
     echo "Running antenna test"
     hybridtest -f "${cfghybrid}" -a 2>&1 | tee "${logant}"
@@ -179,8 +179,8 @@ askComment "${logant}"
 mv "$(ls -1dt Results/HybridTest_* | head -1)" "${dirant}"
 
 # Turn off signal generator
-echo "Have you turned off the signal generator?"
-askYN
+#echo "Have you turned off the signal generator?"
+#askYN
 
 # Measure occupancy
 while

@@ -28,7 +28,7 @@ countRBErrors(){
     }' "${log}")
     # If ${rbe} is set and not empty, add it to ${rbErrors}
     if [ -n "${rbe}" ]; then
-        rbErrors=$(( "${rbErrors}" + ${rbe} ))
+        rbErrors=$(( ${rbErrors} + ${rbe} ))
     fi
 }
 

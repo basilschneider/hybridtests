@@ -1,0 +1,373 @@
+05.07.2018 14:55 ||I| 
+
+
+********************************************************************************
+                                        [1m[31mHW SUMMARY: [0m
+********************************************************************************
+
+[1m[36m|----BeBoard  Id :0[0m
+[1m[36m|	|----FW_Version NCbcDataSize: 4[0m
+[1m[34m	|----Board Id: [1m[33mboard[1m[34m URI: [1m[33mchtcp-2.0://localhost:10203?target=192.168.0.175:50001[1m[34m Address Table: [1m[33mfile://settings/address_table_2CBC.xml
+[1m[34m Type: [1m[33mGLIB[0m
+[1m[36m|	|----Module  FeId :0[0m
+[32m|	|	|----CBC Files Path : hybrid_functional_tests/2-8-D_afterThermalCycling/calibration/Calibration_Hole_05-07-18_14:53/[0m
+[1m[36m|	|	|----CBC  Id :0, File: FE0CBC0.txt[0m
+[32m|	|	|----Global_CBC_Register  name :VCth =  0x88[0m
+[32m|	|	|----Global_CBC_Register  name :TestPulsePot =  0x60[0m
+[32m|	|	|----Global_CBC_Register  name :MiscTestPulseCtrl&AnalogMux =  0x21[0m
+[32m|	|	|----Global_CBC_Register  name :TriggerLatency =  0x01[0m
+[1m[36m|	|	|----CBC  Id :1, File: FE0CBC1.txt[0m
+[32m|	|	|----Global_CBC_Register  name :VCth =  0x88[0m
+[32m|	|	|----Global_CBC_Register  name :TestPulsePot =  0x60[0m
+[32m|	|	|----Global_CBC_Register  name :MiscTestPulseCtrl&AnalogMux =  0x21[0m
+[32m|	|	|----Global_CBC_Register  name :TriggerLatency =  0x01[0m
+
+
+********************************************************************************
+                                        [1m[31mEND OF HW SUMMARY: [0m
+********************************************************************************
+
+
+[31mSetting[0m --[1m[36mNevents[0m:[1m[33m100[0m
+[31mSetting[0m --[1m[36mHoleMode[0m:[1m[33m1[0m
+[31mSetting[0m --[1m[36mThreshold_NSigmas[0m:[1m[33m4[0m
+[31mSetting[0m --[1m[36mTargetVcth[0m:[1m[33m120[0m
+[31mSetting[0m --[1m[36mTargetOffset[0m:[1m[33m80[0m
+[31mSetting[0m --[1m[36mTestPulsePotentiometer[0m:[1m[33m0[0m
+[31mSetting[0m --[1m[36mVerificationLoop[0m:[1m[33m1[0m
+
+05.07.2018 14:55 ||E| Histo Map for CBC 0 (FE 0) does not exist - creating 
+05.07.2018 14:55 ||E| Histo Map for CBC 1 (FE 0) does not exist - creating 
+05.07.2018 14:55 ||I| Creating directory: Results/HybridTest_Hole_05-07-18_14:55
+Info in <TCivetweb::Create>: Starting HTTP server on port 8082
+05.07.2018 14:55 ||I| Opening THttpServer on port 8082. Point your browser to: [1m[32mtestsystem2:8082[0m
+05.07.2018 14:55 ||I| 
+[1m[34mConfiguring HW parsed from .xml file: [0m
+[32mOverriding GLIB register values for signal polarity with value from settings node![0m
+[32mSuccessfully configured Board 0[0m
+[32mSuccessfully configured Cbc 0[0m
+[32mSuccessfully configured Cbc 1[0m
+
+05.07.2018 14:55 ||I| Reading Reg [31mVCth[0m on CBC 0 memory value: 136 read value: 136
+05.07.2018 14:55 ||I| Reading Reg [31mVCth[0m on CBC 1 memory value: 136 read value: 136
+05.07.2018 14:55 ||I| COMMISSIONNING_MODE_RQ: 1
+05.07.2018 14:55 ||I| COMMISSIONNING_MODE_CBC_TEST_PULSE_VALID: 1
+05.07.2018 14:55 ||I| COMMISSIONNING_MODE_DELAY_AFTER_TEST_PULSE: 2
+05.07.2018 14:55 ||I| 
+Shorted channels searching procedure
+Sides: Top - 0	Bottom - 1 (Channel numbering starts from 0)
+
+      Side	| Channel_ID	| Group_ID	| Shorted_With_Group_ID
+	0	|	0	|	0	|	GND
+	1	|	0	|	0	|	GND
+	0	|	8	|	0	|	GND
+	1	|	8	|	0	|	GND
+	0	|	16	|	0	|	GND
+	1	|	16	|	0	|	GND
+	0	|	24	|	0	|	GND
+	1	|	24	|	0	|	GND
+	0	|	32	|	0	|	GND
+	1	|	32	|	0	|	GND
+	0	|	40	|	0	|	GND
+	1	|	40	|	0	|	GND
+	0	|	48	|	0	|	GND
+	1	|	48	|	0	|	GND
+	0	|	56	|	0	|	GND
+	1	|	56	|	0	|	GND
+	0	|	64	|	0	|	GND
+	1	|	64	|	0	|	GND
+	0	|	72	|	0	|	GND
+	1	|	72	|	0	|	GND
+	0	|	80	|	0	|	GND
+	1	|	80	|	0	|	GND
+	0	|	88	|	0	|	GND
+	1	|	88	|	0	|	GND
+	0	|	96	|	0	|	GND
+	1	|	96	|	0	|	GND
+	0	|	104	|	0	|	GND
+	1	|	104	|	0	|	GND
+	0	|	112	|	0	|	GND
+	1	|	112	|	0	|	GND
+	0	|	120	|	0	|	GND
+	1	|	120	|	0	|	GND
+	0	|	176	|	1	|	0
+	0	|	208	|	1	|	0
+------------------------------------------------------------------------
+	0	|	1	|	1	|	GND
+	1	|	1	|	1	|	GND
+	0	|	9	|	1	|	GND
+	1	|	9	|	1	|	GND
+	0	|	17	|	1	|	GND
+	1	|	17	|	1	|	GND
+	0	|	25	|	1	|	GND
+	1	|	25	|	1	|	GND
+	0	|	33	|	1	|	GND
+	1	|	33	|	1	|	GND
+	0	|	41	|	1	|	GND
+	1	|	41	|	1	|	GND
+	0	|	49	|	1	|	GND
+	1	|	49	|	1	|	GND
+	0	|	57	|	1	|	GND
+	1	|	57	|	1	|	GND
+	0	|	65	|	1	|	GND
+	1	|	65	|	1	|	GND
+	0	|	73	|	1	|	GND
+	1	|	73	|	1	|	GND
+	0	|	81	|	1	|	GND
+	1	|	81	|	1	|	GND
+	0	|	89	|	1	|	GND
+	1	|	89	|	1	|	GND
+	0	|	97	|	1	|	GND
+	1	|	97	|	1	|	GND
+	0	|	105	|	1	|	GND
+	1	|	105	|	1	|	GND
+	0	|	113	|	1	|	GND
+	1	|	113	|	1	|	GND
+	0	|	121	|	1	|	GND
+	1	|	121	|	1	|	GND
+	0	|	139	|	4	|	1
+	0	|	175	|	0	|	1
+	0	|	195	|	4	|	1
+	0	|	207	|	0	|	1
+	0	|	251	|	4	|	1
+------------------------------------------------------------------------
+	0	|	2	|	2	|	GND
+	1	|	2	|	2	|	GND
+	0	|	10	|	2	|	GND
+	1	|	10	|	2	|	GND
+	0	|	18	|	2	|	GND
+	1	|	18	|	2	|	GND
+	0	|	26	|	2	|	GND
+	1	|	26	|	2	|	GND
+	0	|	34	|	2	|	GND
+	1	|	34	|	2	|	GND
+	0	|	42	|	2	|	GND
+	1	|	42	|	2	|	GND
+	0	|	50	|	2	|	GND
+	1	|	50	|	2	|	GND
+	0	|	58	|	2	|	GND
+	1	|	58	|	2	|	GND
+	0	|	66	|	2	|	GND
+	1	|	66	|	2	|	GND
+	0	|	74	|	2	|	GND
+	1	|	74	|	2	|	GND
+	0	|	82	|	2	|	GND
+	1	|	82	|	2	|	GND
+	0	|	90	|	2	|	GND
+	1	|	90	|	2	|	GND
+	0	|	98	|	2	|	GND
+	1	|	98	|	2	|	GND
+	0	|	106	|	2	|	GND
+	1	|	106	|	2	|	GND
+	0	|	114	|	2	|	GND
+	1	|	114	|	2	|	GND
+	0	|	122	|	2	|	GND
+	1	|	122	|	2	|	GND
+------------------------------------------------------------------------
+	0	|	3	|	3	|	GND
+	1	|	3	|	3	|	GND
+	0	|	11	|	3	|	GND
+	1	|	11	|	3	|	GND
+	0	|	19	|	3	|	GND
+	1	|	19	|	3	|	GND
+	0	|	27	|	3	|	GND
+	1	|	27	|	3	|	GND
+	0	|	35	|	3	|	GND
+	1	|	35	|	3	|	GND
+	0	|	43	|	3	|	GND
+	1	|	43	|	3	|	GND
+	0	|	51	|	3	|	GND
+	1	|	51	|	3	|	GND
+	0	|	59	|	3	|	GND
+	1	|	59	|	3	|	GND
+	0	|	67	|	3	|	GND
+	1	|	67	|	3	|	GND
+	0	|	75	|	3	|	GND
+	1	|	75	|	3	|	GND
+	0	|	83	|	3	|	GND
+	1	|	83	|	3	|	GND
+	0	|	91	|	3	|	GND
+	1	|	91	|	3	|	GND
+	0	|	99	|	3	|	GND
+	1	|	99	|	3	|	GND
+	0	|	107	|	3	|	GND
+	1	|	107	|	3	|	GND
+	0	|	115	|	3	|	GND
+	1	|	115	|	3	|	GND
+	0	|	123	|	3	|	GND
+	1	|	123	|	3	|	GND
+	0	|	186	|	3	|	GND
+------------------------------------------------------------------------
+	0	|	4	|	4	|	GND
+	1	|	4	|	4	|	GND
+	0	|	12	|	4	|	GND
+	1	|	12	|	4	|	GND
+	0	|	20	|	4	|	GND
+	1	|	20	|	4	|	GND
+	0	|	28	|	4	|	GND
+	1	|	28	|	4	|	GND
+	0	|	36	|	4	|	GND
+	1	|	36	|	4	|	GND
+	0	|	44	|	4	|	GND
+	1	|	44	|	4	|	GND
+	0	|	52	|	4	|	GND
+	1	|	52	|	4	|	GND
+	0	|	60	|	4	|	GND
+	1	|	60	|	4	|	GND
+	0	|	68	|	4	|	GND
+	1	|	68	|	4	|	GND
+	0	|	76	|	4	|	GND
+	1	|	76	|	4	|	GND
+	0	|	84	|	4	|	GND
+	1	|	84	|	4	|	GND
+	0	|	92	|	4	|	GND
+	1	|	92	|	4	|	GND
+	0	|	100	|	4	|	GND
+	1	|	100	|	4	|	GND
+	0	|	108	|	4	|	GND
+	1	|	108	|	4	|	GND
+	0	|	116	|	4	|	GND
+	1	|	116	|	4	|	GND
+	0	|	124	|	4	|	GND
+	1	|	124	|	4	|	GND
+	0	|	136	|	1	|	4
+	0	|	147	|	4	|	GND
+	0	|	192	|	1	|	4
+	0	|	248	|	1	|	4
+------------------------------------------------------------------------
+	0	|	5	|	5	|	GND
+	1	|	5	|	5	|	GND
+	0	|	13	|	5	|	GND
+	1	|	13	|	5	|	GND
+	0	|	21	|	5	|	GND
+	1	|	21	|	5	|	GND
+	0	|	29	|	5	|	GND
+	1	|	29	|	5	|	GND
+	0	|	37	|	5	|	GND
+	1	|	37	|	5	|	GND
+	0	|	45	|	5	|	GND
+	1	|	45	|	5	|	GND
+	0	|	53	|	5	|	GND
+	1	|	53	|	5	|	GND
+	0	|	61	|	5	|	GND
+	1	|	61	|	5	|	GND
+	0	|	69	|	5	|	GND
+	1	|	69	|	5	|	GND
+	0	|	77	|	5	|	GND
+	1	|	77	|	5	|	GND
+	0	|	85	|	5	|	GND
+	1	|	85	|	5	|	GND
+	0	|	93	|	5	|	GND
+	1	|	93	|	5	|	GND
+	0	|	101	|	5	|	GND
+	1	|	101	|	5	|	GND
+	0	|	109	|	5	|	GND
+	1	|	109	|	5	|	GND
+	0	|	117	|	5	|	GND
+	1	|	117	|	5	|	GND
+	0	|	125	|	5	|	GND
+	1	|	125	|	5	|	GND
+	0	|	204	|	5	|	GND
+	0	|	221	|	6	|	5
+------------------------------------------------------------------------
+	0	|	6	|	6	|	GND
+	1	|	6	|	6	|	GND
+	0	|	14	|	6	|	GND
+	1	|	14	|	6	|	GND
+	0	|	22	|	6	|	GND
+	1	|	22	|	6	|	GND
+	0	|	30	|	6	|	GND
+	1	|	30	|	6	|	GND
+	0	|	38	|	6	|	GND
+	1	|	38	|	6	|	GND
+	0	|	46	|	6	|	GND
+	1	|	46	|	6	|	GND
+	0	|	54	|	6	|	GND
+	1	|	54	|	6	|	GND
+	0	|	62	|	6	|	GND
+	1	|	62	|	6	|	GND
+	0	|	70	|	6	|	GND
+	1	|	70	|	6	|	GND
+	0	|	78	|	6	|	GND
+	1	|	78	|	6	|	GND
+	0	|	86	|	6	|	GND
+	1	|	86	|	6	|	GND
+	0	|	94	|	6	|	GND
+	1	|	94	|	6	|	GND
+	0	|	102	|	6	|	GND
+	1	|	102	|	6	|	GND
+	0	|	110	|	6	|	GND
+	1	|	110	|	6	|	GND
+	0	|	118	|	6	|	GND
+	1	|	118	|	6	|	GND
+	0	|	126	|	6	|	GND
+	1	|	126	|	6	|	GND
+	0	|	220	|	5	|	6
+	0	|	230	|	7	|	6
+------------------------------------------------------------------------
+	0	|	7	|	7	|	GND
+	1	|	7	|	7	|	GND
+	0	|	15	|	7	|	GND
+	1	|	15	|	7	|	GND
+	0	|	23	|	7	|	GND
+	1	|	23	|	7	|	GND
+	0	|	31	|	7	|	GND
+	1	|	31	|	7	|	GND
+	0	|	39	|	7	|	GND
+	1	|	39	|	7	|	GND
+	0	|	47	|	7	|	GND
+	1	|	47	|	7	|	GND
+	0	|	55	|	7	|	GND
+	1	|	55	|	7	|	GND
+	0	|	63	|	7	|	GND
+	1	|	63	|	7	|	GND
+	0	|	71	|	7	|	GND
+	1	|	71	|	7	|	GND
+	0	|	79	|	7	|	GND
+	1	|	79	|	7	|	GND
+	0	|	87	|	7	|	GND
+	1	|	87	|	7	|	GND
+	0	|	95	|	7	|	GND
+	1	|	95	|	7	|	GND
+	0	|	103	|	7	|	GND
+	1	|	103	|	7	|	GND
+	0	|	111	|	7	|	GND
+	1	|	111	|	7	|	GND
+	0	|	119	|	7	|	GND
+	1	|	119	|	7	|	GND
+	0	|	229	|	6	|	7
+------------------------------------------------------------------------
+
+05.07.2018 14:55 ||I| 
+---------Creating shorted pairs-----------------
+0 175 0 176 smallest distance: 1
+0 207 0 208 smallest distance: 1
+0 136 0 139 smallest distance: 9
+0 192 0 195 smallest distance: 9
+0 248 0 251 smallest distance: 9
+0 220 0 221 smallest distance: 1
+0 229 0 230 smallest distance: 1
+---------Merging shorts-------------------------
+Number of shorted connections found: 7
+---------Outcome--------------------------------
+ - 1 - 
+0 175 0 176 
+ - 2 - 
+0 207 0 208 
+ - 3 - 
+0 136 0 139 
+ - 4 - 
+0 192 0 195 
+ - 5 - 
+0 248 0 251 
+ - 6 - 
+0 220 0 221 
+ - 7 - 
+0 229 0 230 
+
+
+ Number of grounded inputs: 257
+05.07.2018 14:55 ||I| [1m[34mResults of occupancy measured written to Results/HybridTest_Hole_05-07-18_14:55/Summary.root[0m
+Info in <TCanvas::Print>: pdf file Results/HybridTest_Hole_05-07-18_14:55/HybridTestResults.pdf has been created
+Info in <TCanvas::Print>: pdf file Results/HybridTest_Hole_05-07-18_14:55/NoiseOccupancySummary.pdf has been created
+User comment: one chip died, so got too many grounded channels.

@@ -1,0 +1,4 @@
+Serial: V1-89K-1U-3_afterThermalCycling
+Batch: Good
+Current at startup: 104.6 mA
+Current while busy: 151 mA

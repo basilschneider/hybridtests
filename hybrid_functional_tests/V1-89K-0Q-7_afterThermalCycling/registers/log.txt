@@ -1,0 +1,69 @@
+05.07.2018 15:03 ||I| 
+
+
+********************************************************************************
+                                        [1m[31mHW SUMMARY: [0m
+********************************************************************************
+
+[1m[36m|----BeBoard  Id :0[0m
+[1m[36m|	|----FW_Version NCbcDataSize: 4[0m
+[1m[34m	|----Board Id: [1m[33mboard[1m[34m URI: [1m[33mchtcp-2.0://localhost:10203?target=192.168.0.175:50001[1m[34m Address Table: [1m[33mfile://settings/address_table_2CBC.xml
+[1m[34m Type: [1m[33mGLIB[0m
+[1m[36m|	|----Module  FeId :0[0m
+[32m|	|	|----CBC Files Path : hybrid_functional_tests/V1-89K-0Q-7_afterThermalCycling/calibration/Calibration_Hole_05-07-18_15:02/[0m
+[1m[36m|	|	|----CBC  Id :0, File: FE0CBC0.txt[0m
+[32m|	|	|----Global_CBC_Register  name :VCth =  0x88[0m
+[32m|	|	|----Global_CBC_Register  name :TestPulsePot =  0x60[0m
+[32m|	|	|----Global_CBC_Register  name :MiscTestPulseCtrl&AnalogMux =  0x21[0m
+[32m|	|	|----Global_CBC_Register  name :TriggerLatency =  0x01[0m
+[1m[36m|	|	|----CBC  Id :1, File: FE0CBC1.txt[0m
+[32m|	|	|----Global_CBC_Register  name :VCth =  0x88[0m
+[32m|	|	|----Global_CBC_Register  name :TestPulsePot =  0x60[0m
+[32m|	|	|----Global_CBC_Register  name :MiscTestPulseCtrl&AnalogMux =  0x21[0m
+[32m|	|	|----Global_CBC_Register  name :TriggerLatency =  0x01[0m
+
+
+********************************************************************************
+                                        [1m[31mEND OF HW SUMMARY: [0m
+********************************************************************************
+
+
+[31mSetting[0m --[1m[36mNevents[0m:[1m[33m100[0m
+[31mSetting[0m --[1m[36mHoleMode[0m:[1m[33m1[0m
+[31mSetting[0m --[1m[36mThreshold_NSigmas[0m:[1m[33m4[0m
+[31mSetting[0m --[1m[36mTargetVcth[0m:[1m[33m120[0m
+[31mSetting[0m --[1m[36mTargetOffset[0m:[1m[33m80[0m
+[31mSetting[0m --[1m[36mTestPulsePotentiometer[0m:[1m[33m0[0m
+[31mSetting[0m --[1m[36mVerificationLoop[0m:[1m[33m1[0m
+
+05.07.2018 15:03 ||E| Histo Map for CBC 0 (FE 0) does not exist - creating 
+05.07.2018 15:03 ||E| Histo Map for CBC 1 (FE 0) does not exist - creating 
+05.07.2018 15:03 ||I| Creating directory: Results/HybridTest_Hole_05-07-18_15:03
+Info in <TCivetweb::Create>: Starting HTTP server on port 8082
+05.07.2018 15:03 ||I| Opening THttpServer on port 8082. Point your browser to: [1m[32mtestsystem2:8082[0m
+05.07.2018 15:03 ||I| 
+[1m[34mConfiguring HW parsed from .xml file: [0m
+[32mOverriding GLIB register values for signal polarity with value from settings node![0m
+[32mSuccessfully configured Board 0[0m
+[32mSuccessfully configured Cbc 0[0m
+[32mSuccessfully configured Cbc 1[0m
+
+05.07.2018 15:03 ||I| start: Thu Jul  5 15:03:48 2018
+
+05.07.2018 15:03 ||I| 
+Running registers testing tool ... 
+05.07.2018 15:03 ||I| Channels diagnosis report written to: Results/HybridTest_Hole_05-07-18_15:03/registers_test.txt
+05.07.2018 15:03 ||I| Done testing registers, re-configuring to calibrated state!
+05.07.2018 15:03 ||I| stop: Thu Jul  5 15:03:53 2018
+
+05.07.2018 15:03 ||I| 
+[1m[34mConfiguring HW parsed from .xml file: [0m
+[32mOverriding GLIB register values for signal polarity with value from settings node![0m
+[32mSuccessfully configured Board 0[0m
+[32mSuccessfully configured Cbc 0[0m
+[32mSuccessfully configured Cbc 1[0m
+
+05.07.2018 15:03 ||I| [1m[34mResults of occupancy measured written to Results/HybridTest_Hole_05-07-18_15:03/Summary.root[0m
+Info in <TCanvas::Print>: pdf file Results/HybridTest_Hole_05-07-18_15:03/HybridTestResults.pdf has been created
+Info in <TCanvas::Print>: pdf file Results/HybridTest_Hole_05-07-18_15:03/NoiseOccupancySummary.pdf has been created
+User comment: 

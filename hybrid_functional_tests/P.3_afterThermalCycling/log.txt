@@ -1,0 +1,4 @@
+Serial: P.3_afterThermalCycling
+Batch: Good
+Current at startup: 104.7 mA
+Current while busy: 152 mA

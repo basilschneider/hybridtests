@@ -1,0 +1,4 @@
+Serial: 1-12-D_afterThermalCycling
+Batch: Good
+Current at startup: 109.5 mA
+Current while busy: 156 mA

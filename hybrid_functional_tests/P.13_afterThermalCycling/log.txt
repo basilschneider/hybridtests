@@ -1,0 +1,3 @@
+Serial: P.13_afterThermalCycling
+Batch: Good
+Current at startup: 105.4 mA

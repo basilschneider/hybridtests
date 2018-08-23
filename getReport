@@ -33,7 +33,7 @@ countRBErrors(){
 }
 
 repLong(){
-    echo long report
+    echo "Long report not implemented yet."
 }
 
 repShort(){

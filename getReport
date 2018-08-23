@@ -3,7 +3,7 @@
 # Get report from hybrid tests
 
 long=false
-dir=hybrid_functional_tests
+dir=hybrid_functional_tests/GS8QN_7002
 logfile=log.txt
 
 usage(){
@@ -37,100 +37,97 @@ repLong(){
 }
 
 repShort(){
-    for hybrid in "${dir}"/*; do
+    # Count read back errors
+    rbErrors=0
 
+    # Set directory and log file names
+    logparent="${dir}/${logfile}"
+    logcal="${dir}/calibration/${logfile}"
+    logreg="${dir}/registers/${logfile}"
+    logshr="${dir}/shorts/${logfile}"
+    logant="${dir}/antenna/${logfile}"
+    logocc="${dir}/occupancy/${logfile}"
+
+    # General information
+    echo "General information:"
+    if [ -f "${logparent}" ]; then
+        cat "${logparent}"
+    else
+        echo "No parent log file found: ${logparent}"
+        echo "This is bad."
+    fi
+    echo
+
+    # Calibration results
+    echo "Calibration results:"
+    if [ -f "${logcal}" ]; then
+        grep 'Too many CBC readback errors' "${logcal}"
+        grep 'User comment' "${logcal}"
         # Count read back errors
-        rbErrors=0
+        countRBErrors "${logcal}"
+    else
+        echo "No calibration log file found: ${logcal}"
+    fi
+    echo
 
-        # Set directory and log file names
-        logparent="${hybrid}/${logfile}"
-        logcal="${hybrid}/calibration/${logfile}"
-        logreg="${hybrid}/registers/${logfile}"
-        logshr="${hybrid}/shorts/${logfile}"
-        logant="${hybrid}/antenna/${logfile}"
-        logocc="${hybrid}/occupancy/${logfile}"
+    # Register read/write tests
+    echo "Register read/write tests:"
+    if [ -f "${logreg}" ]; then
+        grep ' on CBC' "${logreg}"
+        grep 'User comment' "${logreg}"
+        # Count read back errors
+        countRBErrors "${logreg}"
+    else
+        echo "No registers log file found: ${logreg}"
+    fi
+    echo
 
-        # General information
-        echo "General information:"
-        if [ -f "${logparent}" ]; then
-            cat "${logparent}"
-        else
-            echo "No parent log file found: ${logparent}"
-            echo "This is bad."
-        fi
-        echo
+    # Shorts finding tests
+    echo "Shorts finding tests:"
+    if [ -f "${logshr}" ]; then
+        sed '1,/Shorted channels searching procedure/d' "${logshr}" | \
+            egrep -v 'TCanvas::Print|Results of occupancy'
+        # Count read back errors
+        countRBErrors "${logshr}"
+    else
+        echo "No registers log file found: ${logshr}"
+    fi
+    echo
 
-        # Calibration results
-        echo "Calibration results:"
-        if [ -f "${logcal}" ]; then
-            grep 'Too many CBC readback errors' "${logcal}"
-            grep 'User comment' "${logcal}"
-            # Count read back errors
-            countRBErrors "${logcal}"
-        else
-            echo "No calibration log file found: ${logcal}"
-        fi
-        echo
+    # Antenna tests
+    echo "Antenna tests:"
+    if [ -f "${logant}" ]; then
+        #sed -n '/Open channels on TOP:/,/Total number of open channels/p' \
+        #    "${logant}"
+    grep 'Open channels:' "${logant}"
+        grep 'Total number of open channels found' "${logant}"
+        grep 'User comment' "${logant}"
+        # Count read back errors
+        countRBErrors "${logant}"
+    else
+        echo "No antenna log file found: ${logant}"
+    fi
+    echo
 
-        # Register read/write tests
-        echo "Register read/write tests:"
-        if [ -f "${logreg}" ]; then
-            grep ' on CBC' "${logreg}"
-            grep 'User comment' "${logreg}"
-            # Count read back errors
-            countRBErrors "${logreg}"
-        else
-            echo "No registers log file found: ${logreg}"
-        fi
-        echo
+    # Occupancy tests
+    echo "Occupancy tests:"
+    if [ -f "${logocc}" ]; then
+        grep 'User comment' "${logocc}"
+        # Count read back errors
+        countRBErrors "${logocc}"
+    else
+        echo "No occupancy log file found: ${logocc}"
+    fi
+    echo
 
-        # Shorts finding tests
-        echo "Shorts finding tests:"
-        if [ -f "${logshr}" ]; then
-            sed '1,/Shorted channels searching procedure/d' "${logshr}" | \
-                egrep -v 'TCanvas::Print|Results of occupancy'
-            # Count read back errors
-            countRBErrors "${logshr}"
-        else
-            echo "No registers log file found: ${logshr}"
-        fi
-        echo
-
-        # Antenna tests
-        echo "Antenna tests:"
-        if [ -f "${logant}" ]; then
-            #sed -n '/Open channels on TOP:/,/Total number of open channels/p' \
-            #    "${logant}"
-	    grep 'Open channels:' "${logant}"
-            grep 'Total number of open channels found' "${logant}"
-            grep 'User comment' "${logant}"
-            # Count read back errors
-            countRBErrors "${logant}"
-        else
-            echo "No antenna log file found: ${logant}"
-        fi
-        echo
-
-        # Occupancy tests
-        echo "Occupancy tests:"
-        if [ -f "${logocc}" ]; then
-            grep 'User comment' "${logocc}"
-            # Count read back errors
-            countRBErrors "${logocc}"
-        else
-            echo "No occupancy log file found: ${logocc}"
-        fi
-        echo
-
-        # Readback errors
-        echo "Readback errors: ${rbErrors}"
+    # Readback errors
+    echo "Readback errors: ${rbErrors}"
 
 
-        # Next hybrid
-        echo
-        echo ==================================================================
-        echo
-    done
+    # Next hybrid
+    echo
+    echo ==================================================================
+    echo
 }
 
 parseOptions(){

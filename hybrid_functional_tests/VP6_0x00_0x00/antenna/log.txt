@@ -1,0 +1,106 @@
+23.08.2018 12:05 ||I| 
+
+
+********************************************************************************
+                                        [1m[31mHW SUMMARY: [0m
+********************************************************************************
+
+[1m[36m|----BeBoard  Id :0[0m
+[1m[36m|	|----FW_Version NCbcDataSize: 4[0m
+[1m[34m	|----Board Id: [1m[33mboard[1m[34m URI: [1m[33mchtcp-2.0://localhost:10203?target=192.168.0.175:50001[1m[34m Address Table: [1m[33mfile://settings/address_table_2CBC.xml
+[1m[34m Type: [1m[33mGLIB[0m
+[1m[36m|	|----Module  FeId :0[0m
+[32m|	|	|----CBC Files Path : hybrid_functional_tests/VP6_0x00_0x00/calibration/Calibration_Hole_23-08-18_12:03/[0m
+[1m[36m|	|	|----CBC  Id :0, File: FE0CBC0.txt[0m
+[32m|	|	|----Global_CBC_Register  name :VCth =  0x88[0m
+[32m|	|	|----Global_CBC_Register  name :TestPulsePot =  0x60[0m
+[32m|	|	|----Global_CBC_Register  name :MiscTestPulseCtrl&AnalogMux =  0x21[0m
+[32m|	|	|----Global_CBC_Register  name :TriggerLatency =  0x01[0m
+[1m[36m|	|	|----CBC  Id :1, File: FE0CBC1.txt[0m
+[32m|	|	|----Global_CBC_Register  name :VCth =  0x88[0m
+[32m|	|	|----Global_CBC_Register  name :TestPulsePot =  0x60[0m
+[32m|	|	|----Global_CBC_Register  name :MiscTestPulseCtrl&AnalogMux =  0x21[0m
+[32m|	|	|----Global_CBC_Register  name :TriggerLatency =  0x01[0m
+
+
+********************************************************************************
+                                        [1m[31mEND OF HW SUMMARY: [0m
+********************************************************************************
+
+
+[31mSetting[0m --[1m[36mNevents[0m:[1m[33m100[0m
+[31mSetting[0m --[1m[36mHoleMode[0m:[1m[33m1[0m
+[31mSetting[0m --[1m[36mThreshold_NSigmas[0m:[1m[33m4[0m
+[31mSetting[0m --[1m[36mTargetVcth[0m:[1m[33m120[0m
+[31mSetting[0m --[1m[36mTargetOffset[0m:[1m[33m80[0m
+[31mSetting[0m --[1m[36mTestPulsePotentiometer[0m:[1m[33m0[0m
+[31mSetting[0m --[1m[36mVerificationLoop[0m:[1m[33m1[0m
+
+23.08.2018 12:05 ||E| Histo Map for CBC 0 (FE 0) does not exist - creating 
+23.08.2018 12:05 ||E| Histo Map for CBC 1 (FE 0) does not exist - creating 
+23.08.2018 12:05 ||I| Creating directory: Results/HybridTest_Hole_23-08-18_12:05
+Info in <TCivetweb::Create>: Starting HTTP server on port 8082
+23.08.2018 12:05 ||I| Opening THttpServer on port 8082. Point your browser to: [1m[32mtestsystem2:8082[0m
+23.08.2018 12:05 ||I| 
+[1m[34mConfiguring HW parsed from .xml file: [0m
+[32mOverriding GLIB register values for signal polarity with value from settings node![0m
+[32mSuccessfully configured Board 0[0m
+[32mSuccessfully configured Cbc 0[0m
+[32mSuccessfully configured Cbc 1[0m
+
+23.08.2018 12:05 ||I| Mesuring Efficiency per Strip ... 
+23.08.2018 12:05 ||I| Taking data with 100 Events!
+23.08.2018 12:05 ||I| Reading Reg [31mVCth[0m on CBC 0 memory value: 136 read value: 136
+23.08.2018 12:05 ||I| Reading Reg [31mVCth[0m on CBC 1 memory value: 136 read value: 136
+usb_set_debug: Setting debugging level to 255 (on)
+usb_os_init: Found USB VFS at /dev/bus/usb
+usb_os_find_busses: Found 004
+usb_os_find_busses: Found 003
+usb_os_find_busses: Found 002
+usb_os_find_busses: Found 001
+usb_os_find_devices: Found 001 on 004
+usb_os_find_devices: Found 001 on 003
+usb_os_find_devices: Found 047 on 002
+usb_os_find_devices: Found 003 on 002
+skipped 4 class/vendor specific interface descriptors
+usb_os_find_devices: Found 002 on 002
+usb_os_find_devices: Found 001 on 002
+error obtaining child information: Inappropriate ioctl for device
+error obtaining child information: Inappropriate ioctl for device
+usb_os_find_devices: Found 004 on 001
+skipped 1 class/vendor specific interface descriptors
+skipped 1 class/vendor specific interface descriptors
+usb_os_find_devices: Found 002 on 001
+usb_os_find_devices: Found 001 on 001
+error obtaining child information: Inappropriate ioctl for device
+antenna_usb_handle with Vendor Id: 4292 and Product Id: 34720 found 
+USB error: error sending control message: Connection timed out
+Results of clock frequency generator byte 0: 10
+Results of digital potentiometer 0: 11
+AMUX0 channel: 1
+Error in <THttpServer::ProcessRequests>: Should be called only from main ROOT thread
+AMUX0 channel: 2
+AMUX0 channel: 3
+AMUX0 channel: 4
+AMUX0 channel: 5
+AMUX0 channel: 6
+AMUX0 channel: 7
+AMUX0 channel: 8
+AMUX1 channel: 1
+AMUX1 channel: 2
+AMUX1 channel: 3
+AMUX1 channel: 4
+AMUX1 channel: 5
+AMUX1 channel: 6
+AMUX1 channel: 7
+Error in <THttpServer::ProcessRequests>: Should be called only from main ROOT thread
+AMUX1 channel: 8
+Open channels: 127; 128; 129; 130; 131; 132; 133; 134; 135; 136; 137; 138; 139; 140; 141; 142; 143; 144; 145; 146; 147; 148; 149; 150; 151; 152; 153; 154; 155; 156; 157; 158; 159; 160; 161; 162; 163; 164; 165; 166; 167; 168; 169; 170; 171; 172; 173; 174; 176; 177; 178; 179; 180; 181; 182; 183; 184; 185; 186; 187; 188; 189; 190; 191; 193; 194; 195; 196; 197; 198; 199; 200; 201; 202; 203; 204; 205; 206; 208; 209; 210; 211; 212; 213; 214; 215; 216; 217; 218; 219; 220; 221; 222; 223; 224; 225; 226; 227; 228; 230; 231; 232; 233; 234; 235; 236; 237; 238; 239; 240; 241; 242; 243; 244; 245; 246; 247; 248; 249; 250; 251; 252; 253;
+Total number of open channels found in the hybrid: 123
+23.08.2018 12:05 ||I| 
+Summary testing report written to: 
+Results/HybridTestingDatabase/Hybrid_ID-1_on_23-08-18_12:05.txt
+23.08.2018 12:05 ||I| [1m[34mResults of occupancy measured written to Results/HybridTest_Hole_23-08-18_12:05/Summary.root[0m
+Info in <TCanvas::Print>: pdf file Results/HybridTest_Hole_23-08-18_12:05/HybridTestResults.pdf has been created
+Info in <TCanvas::Print>: pdf file Results/HybridTest_Hole_23-08-18_12:05/NoiseOccupancySummary.pdf has been created
+User comment: 

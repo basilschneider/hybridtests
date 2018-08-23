@@ -1,0 +1,4 @@
+Serial: VP6_0x02_0x16
+Batch: Good
+Current at startup: 102.4 mA
+Current while busy: 146.3 mA

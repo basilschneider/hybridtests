@@ -1,0 +1,4 @@
+Serial: Valtronic_P.6_afterThermalCycling_try02
+Batch: Good
+Current at startup: 101.2 mA
+Current while busy: 149.8 mA

@@ -1,0 +1,3 @@
+Testing Cbc Registers one-by-one with complimentary bit-patterns (0xAA, 0x55)
+Malfunctioning Registers on Cbc 0 : 
+Malfunctioning Registers on Cbc 1 : 

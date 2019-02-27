@@ -15,8 +15,8 @@
 
 outdir=hybrid_functional_tests
 logname=log.txt
-cfgcalibrate=settings/Calibration2CBC.xml
-cfghybrid=settings/HybridTest2CBC.xml
+cfgcalibrate=settings/D19CDescription.xml
+cfghybrid=settings/D19CDescription.xml
 
 askYN(){
     y="Yes, continue!"

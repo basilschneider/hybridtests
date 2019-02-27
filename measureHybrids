@@ -84,8 +84,8 @@ dirparent="${outdir}/${hybridname}"
 logparent="${dirparent}/${logname}"
 dircal="${dirparent}/calibration"
 logcal="${dircal}/${logname}"
-dirreg="${dirparent}/registers"
-logreg="${dirreg}/${logname}"
+#dirreg="${dirparent}/registers"
+#logreg="${dirreg}/${logname}"
 dirshr="${dirparent}/shorts"
 logshr="${dirshr}/${logname}"
 dirant="${dirparent}/antenna"
@@ -100,7 +100,8 @@ if [ -d "${dirparent}" ]; then
     askYN
     rm -rf "${dirparent}"
 fi
-mkdir -p "${dircal}" "${dirreg}" "${dirshr}" "${dirant}" "${dirocc}"
+#mkdir -p "${dircal}" "${dirreg}" "${dirshr}" "${dirant}" "${dirocc}"
+mkdir -p "${dircal}" "${dirshr}" "${dirant}" "${dirocc}"
 
 # Write serial number in log file
 echo "Serial: ${hybridname}" >> "${logparent}"
@@ -138,19 +139,19 @@ dircalres="${dircal}/${dircalres#Results/}"
 # Set calibration results in hybridtest config (quoting nightmare)
 sed -i '/CBC_Files/s@"[^"]*"@"'${dircalres}'/"@' "${cfghybrid}"
 
-# Test registers of chips
-while
-    echo "Running registers test"
-    hybridtest -f "${cfghybrid}" -r 2>&1 | tee "${logreg}"
-    echo "Do you want to keep that measurement?"
-    askYNR
-do
-    :
-done
-askComment "${logreg}"
-
-# Move results
-mv "$(ls -1dt Results/HybridTest_* | head -1)" "${dirreg}"
+## Test registers of chips
+#while
+#    echo "Running registers test"
+#    hybridtest -f "${cfghybrid}" -r 2>&1 | tee "${logreg}"
+#    echo "Do you want to keep that measurement?"
+#    askYNR
+#do
+#    :
+#done
+#askComment "${logreg}"
+#
+## Move results
+#mv "$(ls -1dt Results/HybridTest_* | head -1)" "${dirreg}"
 
 # Test shorts on hybrid
 while

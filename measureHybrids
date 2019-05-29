@@ -110,10 +110,10 @@ echo "Serial: ${hybridname}" >> "${logparent}"
 cp "${cfgcalibrate}" "${dirparent}"
 cp "${cfghybrid}" "${dirparent}"
 
-# Ask if this hybrid is from a good or bad batch
-echo "Is this hybrid from the good or the bad batch, as defined by "
-echo "the manufacturer?"
-askGB
+## Ask if this hybrid is from a good or bad batch
+#echo "Is this hybrid from the good or the bad batch, as defined by "
+#echo "the manufacturer?"
+#askGB
 
 # Ask for current
 echo -n "Tell me the LV current (in mA) that is drawn by the hybrid: "
